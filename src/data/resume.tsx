@@ -1,0 +1,218 @@
+import { Icons } from "@/components/icons";
+import { HomeIcon, NotebookIcon } from "lucide-react";
+
+export const DATA = {
+  name: "Han Lin Chong",
+  initials: "Han",
+  url: "https://chonghanlin.onrender.com",
+  location: "Singapore / Kuala Lumpur",
+  locationLink: "https://www.google.com/maps/place/singapore",
+  description:
+    "building cool stuff with AI 🛠️ and helping others out 🤝",
+  summary:
+    "i help entrepreneurs and business owners **build a strong online presence** 🌐 \n\ndrive more **leads and sales** 📈 \n\nestablish a **professional online profile** 💼 \n\nhelping you to **earn more money** 💸 \n\nand have more time to **focus on the things you love** ❤️",
+  avatarUrl: "/me (edited).jpg",
+  skills: [
+    "HTML",
+    "CSS",
+    "Javascript",
+    "Typescript",
+    "Bootstrap",
+    "React",
+    "Vite",
+    "Next.js",
+    "Node.js",
+    "npm",
+    "Tailwind CSS",
+    "Magic UI",
+    "Shadcn",
+    "React Query",
+    "Framer Motion",
+    "API",
+    "Three.js",
+    "Lucide React",
+    "Cloudflare",
+    "Render",
+    "Git",
+    "Claude Sonnet 3.5 / 3.7",
+    "Meta AI Llama 3.1 / 3.3",
+    "Deepseek R1 / V3",
+    "Google Gemini 2.0",
+    "Windsurf AI Code Editor",
+    "VSCode",
+    "Bolt.new",
+    "v0.dev"
+  ],
+  navbar: [
+    { href: "/", icon: HomeIcon, label: "Home" },
+    { href: "/blog", icon: NotebookIcon, label: "Blog" },
+  ],
+  contact: {
+    email: "gamingcomputing@outlook.com",
+    tel: "+65 82116596",
+    social: {
+      GitHub: {
+        name: "GitHub",
+        url: "https://github.com/han669669",
+        icon: Icons.github,
+
+        navbar: true,
+      },
+      // LinkedIn: {
+      //   name: "LinkedIn",
+      //   url: "https://dub.sh/dillion-linkedin",
+      //   icon: Icons.linkedin,
+
+      //   navbar: true,
+      // },
+      X: {
+        name: "X",
+        url: "https://x.com/intent/follow?screen_name=bbqbbq669",
+        icon: Icons.x,
+
+        navbar: true,
+      },
+      // Youtube: {
+      //   name: "Youtube",
+      //   url: "https://dub.sh/dillion-youtube",
+      //   icon: Icons.youtube,
+      //   navbar: true,
+      // },
+      email: {
+        name: "Send Email",
+        url: "mailto:gamingcomputing@outlook.com",
+        icon: Icons.email,
+
+        navbar: true,
+      },
+    },
+  },
+  projects: [
+    {
+      title: "Malaysia Home Finder",
+      href: "https://luxuryhomes.pages.dev",
+      dates: "Dec 2024 - Present",
+      active: true,
+      description:
+        "Integrating [Windsurf AI Code Editor](https://codeium.com/windsurf) into my workflow. \n\n I decided to build a modern, high-performance web application for showcasing luxury condos and serviced apartments, built with cutting-edge web technologies.",
+      technologies: [
+        "React",
+        "Typescript",
+        "Vite",
+        "TailWindCSS",
+        "React Query",
+        "Framer Motion",
+        "Lucide React",
+        "Windsurf",
+        "Claude Sonnet 3.5",
+        "Meta AI Llama 3.1",
+        "Cloudflare"
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://luxuryhomes.pages.dev",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "",
+      video:
+        "/malaysiahomefinder.mp4",
+    },
+    {
+      title: "Photography Showcase",
+      href: "https://chonghanlin.onrender.com",
+      dates: "May 2024 - June 2024",
+      active: true,
+      description:
+        "Showcasing my photography journey in Singapore, capturing the beauty of the city-state through my lens. \n\nBuilt with simplicity in mind, and also features an appointment scheduling section, allowing users to book a photoshoot with me directly. \n\nPhotos are fetched using the Imgur API. ",
+      technologies: [
+        "HTML",
+        "CSS",
+        "Javascript",
+        "Bootstrap",
+        "VSCode",
+        "Codeium",
+        "Git",
+        "Imgur API",
+        "Render"
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://chonghanlin.onrender.com",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/han669669/personal-portfolio",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "/photography-portfolio.mp4",
+    },
+    {
+      title: "LLM Leaderboard",
+      href: "https://webdev-arena-llm-leaderboard.onrender.com",
+      dates: "March 2025 - Present",
+      active: true,
+      description:
+        "This project recreates the WebDev Arena Leaderboard to provide a more comprehensive comparison of Large Language Models (LLMs) based on their web development performance. \n\nWebDev Arena is a real-time AI coding competition where models go head-to-head in web development challenges, developed by LMArena. \n\nThe recreated leaderboard includes input and output costs, providing a more detailed assessment of LLMs' performance.",
+      technologies: [
+        "Next.js",
+        "React",
+        "Typescript",
+        "TailwindCSS",
+        "Radix UI",
+        "Lucide React",
+        "Render",
+        "v0.dev",
+        "Gemini 2.0",
+        "VSCode"
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://webdev-arena-llm-leaderboard.onrender.com",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/han669669/webdev-arena-llm-leaderboard",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "/webdev-arena-llm-leaderboard.mp4",
+    },
+    {
+      title: "Voice Visualizer",
+      href: "https://voice-mode.onrender.com",
+      dates: "March 2025 - March 2025",
+      active: true,
+      description:
+        "A mesmerizing voice-controlled particle visualizer that transforms your voice input into a dynamic and interactive visual experience. Using WebGL and Three.js, \n\nthe application creates a sphere of particles that react to the amplitude of your voice. \n\nThe particles dance and shift in real-time, responding to your every word and sound.",
+      technologies: [
+        "HTML",
+        "CSS",
+        "Javascript",
+        "Three.js",
+        "WebGL",
+        "Web Audio API",
+        "VSCode",
+        "Google Gemini 2.0 Flash"
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://voice-mode.onrender.com",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "",
+      video:
+        "/voice-mode.mp4",
+    },
+  ],
+} as const;

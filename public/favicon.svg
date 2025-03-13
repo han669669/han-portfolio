@@ -1,0 +1,11 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" fill="transparent"/>
+<!--Transparent Background-->
+  <path d="M4 8L8 4L8 28L4 24" stroke="#333333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M28 8L24 4L24 28L28 24" stroke="#333333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="16" cy="16" r="4" fill="#FF4081"/>
+<!--Center Circle-->
+  <circle cx="16" cy="16" r="6" fill="#FF4081" fill-opacity="0.5"/>
+<!--Outer Circle (Opacity for Glow)-->
+</svg>
+<!-- This SVG code creates a simple favicon with a transparent background, two vertical lines, and a central circle with a glowing effect. You can adjust the colors, sizes, and positions as needed for your specific design. -->
