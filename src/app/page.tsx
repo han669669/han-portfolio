@@ -7,7 +7,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
-import Markdown from "react-markdown";
+import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -44,9 +45,12 @@ export default function Page() {
           <h2 className="text-xl font-bold">about</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <Markdown className="mt-2 prose max-w-full text-pretty font-sans text-base leading-relaxed text-muted-foreground dark:prose-invert">
+          <ReactMarkdown
+            className="mt-2 prose max-w-full text-pretty font-sans text-base leading-relaxed text-muted-foreground dark:prose-invert"
+            rehypePlugins={[rehypeRaw]}
+          >
             {DATA.summary}
-          </Markdown>
+          </ReactMarkdown>
         </BlurFade>
       </section>
       <section id="skills">
