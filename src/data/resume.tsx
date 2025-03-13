@@ -33,6 +33,7 @@ export const DATA = {
     "Lucide React",
     "Cloudflare",
     "Render",
+    "Vercel",
     "Git",
     "Claude Sonnet 3.5 / 3.7",
     "Meta AI Llama 3.1 / 3.3",
@@ -154,7 +155,7 @@ export const DATA = {
     },
     {
       title: "LLM Leaderboard",
-      href: "https://webdev-arena-llm-leaderboard.onrender.com",
+      href: "https://webdev-arena-llm-leaderboard.vercel.app/",
       dates: "March 2025 - Present",
       active: true,
       description:
@@ -166,7 +167,7 @@ export const DATA = {
         "TailwindCSS",
         "Radix UI",
         "Lucide React",
-        "Render",
+        "Vercel",
         "v0.dev",
         "Gemini 2.0",
         "VSCode"
@@ -174,7 +175,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://webdev-arena-llm-leaderboard.onrender.com",
+          href: "https://webdev-arena-llm-leaderboard.vercel.app/",
           icon: <Icons.globe className="size-3" />,
         },
         {
@@ -201,6 +202,7 @@ export const DATA = {
         "WebGL",
         "Web Audio API",
         "VSCode",
+        "Render",
         "Google Gemini 2.0 Flash"
       ],
       links: [
