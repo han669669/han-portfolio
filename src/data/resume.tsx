@@ -11,7 +11,7 @@ export const DATA = {
     "building cool stuff with AI 🛠️ and helping others out 🤝",
   summary:
     "i help entrepreneurs and business owners **build a strong online presence** 🌐 \n\ndrive more **leads and sales** 📈 \n\nestablish a **professional online profile** 💼 \n\nhelping you to **earn more money** 💸 \n\nand have more time to **focus on the things you love** ❤️",
-  avatarUrl: "/me (edited).jpg",
+  avatarUrl: "/me(edited).JPG",
   skills: [
     "HTML",
     "CSS",
