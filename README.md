@@ -1,50 +1,63 @@
 # Portfolio
 
-Built with next.js, [shadcn/ui](https://ui.shadcn.com/), and [magic ui](https://magicui.design/), deployable to Vercel with a single click. This is a portfolio template that you can use to showcase your work and skills. 
+A personal portfolio template built with Next.js, designed to showcase your work, skills, and experience. It includes a blog and is optimized for different devices and deployment platforms. The template also comes with a responsive layout, and support for both light and dark mode. The template is easy to customize and comes with a set of pre-built components and utilities to help you quickly build your portfolio website.
 
-# Features
+## Tech Stack
 
-- Setup only takes a few minutes by editing the [single config file](./src/data/resume.tsx)
-- Built using Next.js 15, React, Typescript, Shadcn/UI, TailwindCSS, Framer Motion, Magic UI
-- Includes a blog
-- Responsive for different devices
-- Optimized for Next.js and Vercel
+-   [Next.js](https://nextjs.org/) 15: React framework for building performant web applications.
+-   [React](https://reactjs.org/): JavaScript library for building user interfaces.
+-   [TypeScript](https://www.typescriptlang.org/): Superset of JavaScript that adds static typing.
+-   [shadcn/ui](https://ui.shadcn.com/): Reusable components built using Radix UI and Tailwind CSS.
+-   [Tailwind CSS](https://tailwindcss.com/): Utility-first CSS framework for rapid UI development.
+-   [Framer Motion](https://www.framer.com/motion/): Production-ready motion library for React.
+-   [Magic UI](https://magicui.design/): A set of UI components.
 
-# Migration to Next.js 15
+## Features
 
-The project has been successfully migrated to Next.js 15. The following changes were made:
+-   **Easy Setup:** Configuration is done through a single file (`src/data/resume.tsx`).
+-   **Blog:** Integrated blog functionality to share your thoughts and ideas.
+-   **Responsive Design:** Adapts to different screen sizes and devices.
+-   **Optimized for Next.js and Vercel:** Designed for performance and easy deployment.
 
-- Updated `next` and `eslint-config-next` dependencies in `package.json` to version `^15.0.0`.
-- Updated the type definitions in `src/app/blog/[slug]/page.tsx` to explicitly define the `PageProps` type and await the `params` object.
+## Migration to Next.js 15
 
-# Getting Started Locally
+This project has been migrated to Next.js 15. Key updates include:
 
-1. Clone this repository to your local machine:
+-   `next` and `eslint-config-next` dependencies updated to version `^15.2.2` in `package.json`.
+-   Type definitions in `src/app/blog/[slug]/page.tsx` explicitly define the `PageProps` type and await the `params` object.
 
-   ```bash
-   git clone https://github.com/dillionverma/portfolio
-   ```
+## Getting Started Locally
 
-2. Move to the cloned directory
+1.  Clone the repository:
 
-   ```bash
-   cd portfolio
-   ```
+    ```bash
+    git clone https://github.com/han669669/han-portfolio
+    ```
 
-3. Install dependencies:
+2.  Navigate to the project directory:
 
-   ```bash
-   npm install
-   ```
+    ```bash
+    cd portfolio
+    ```
 
-4. Start the local Server:
+3.  Install dependencies:
 
-   ```bash
-   npm run dev
-   ```
+    ```bash
+    npm install
+    ```
 
-5. Open the [Config file](./src/data/resume.tsx) and make changes
+4.  Start the development server:
 
-# License
+    ```bash
+    npm run dev
+    ```
+
+5.  Customize the portfolio by editing `src/data/resume.tsx`.
+
+## Credits
+
+This project is inspired by and incorporates elements from [dillionverma/portfolio](https://github.com/dillionverma/portfolio).
+
+## License
 
 Licensed under the [MIT license](https://github.com/dillionverma/portfolio/blob/main/LICENSE.md).

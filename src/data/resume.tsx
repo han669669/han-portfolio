@@ -41,6 +41,7 @@ export const DATA = {
     "Google Gemini 2.0",
     "Windsurf AI Code Editor",
     "VSCode",
+    "Cline",
     "Bolt.new",
     "v0.dev"
   ],
@@ -170,7 +171,8 @@ export const DATA = {
         "Vercel",
         "v0.dev",
         "Gemini 2.0",
-        "VSCode"
+        "VSCode",
+        "Cline"
       ],
       links: [
         {
@@ -202,6 +204,7 @@ export const DATA = {
         "WebGL",
         "Web Audio API",
         "VSCode",
+        "Cline",
         "Render",
         "Google Gemini 2.0 Flash"
       ],
@@ -211,10 +214,53 @@ export const DATA = {
           href: "https://voice-mode.onrender.com",
           icon: <Icons.globe className="size-3" />,
         },
+        {
+          type: "Source",
+          href: "https://github.com/han669669/voice-mode",
+          icon: <Icons.github className="size-3" />,
+        },
       ],
       image: "",
       video:
         "/voice-mode.mp4",
+    },
+    {
+      title: "Personal Portfolio",
+      href: "https://hanlin-portfolio.vercal.app",
+      dates: "March 2025 - Present",
+      active: true,
+      description:
+        "A personal portfolio website that includes a blog and is optimized for different devices and deployment platform. The website has a responsive layout and supports both light and dark mode. \n\nIt is designed for performance and easy deployment to vercel, making it a great starting point for anyone looking to build a fast and scalable portfolio with a blog. ",
+      technologies: [
+        "Next.js",
+        "React",
+        "Typescript",
+        "shadcn",
+        "Radix UI",
+        "Lucide React",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Magic UI",
+        "VSCode",
+        "Cline",
+        "Vercel",
+        "Google Gemini 2.0 Flash"
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://hanlin-portfolio.vercal.app",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/han669669/han-portfolio",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video:
+        "/han-portfolio.mp4",
     },
   ],
 } as const;
