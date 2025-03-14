@@ -226,7 +226,7 @@ export const DATA = {
     },
     {
       title: "Personal Portfolio",
-      href: "https://hanlin-portfolio.vercal.app",
+      href: "https://hanlin-portfolio.vercel.app",
       dates: "March 2025 - Present",
       active: true,
       description:
@@ -249,7 +249,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://hanlin-portfolio.vercal.app",
+          href: "https://hanlin-portfolio.vercel.app",
           icon: <Icons.globe className="size-3" />,
         },
         {
