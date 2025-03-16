@@ -2,6 +2,8 @@
 
 ## Project-Specific Patterns
 
+- Using a component to display education data.
+
 ## User Preferences and Workflow
 
 ## Known Challenges
@@ -9,3 +11,5 @@
 ## Evolution of Project Decisions
 
 ## Tool Usage Patterns
+
+- Using write_to_file to overwrite file contents when replace_in_file fails to replace all occurrences.

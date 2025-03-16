@@ -3,14 +3,14 @@
 ## What Works
 
 - The memory bank has been initialized with the core files.
+- Education details and skills have been added to `src/data/resume.tsx`.
+- The education section has been added to `src/app/page.tsx`.
 
 ## What's Left to Build
 
-- The content of the website, including the homepage, about section, projects section, skills section, and contact form.
-
 ## Current Status
 
-- The memory bank is initialized, and the project is in the initial planning stages.
+- The memory bank is initialized, education details and skills have been added, and the project has been completed to presentable production standards.
 
 ## Known Issues
 

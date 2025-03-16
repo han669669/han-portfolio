@@ -53,9 +53,34 @@ export default function Page() {
           </ReactMarkdown>
         </BlurFade>
       </section>
+
+      <section id="education">
+        <div className="flex min-h-0 flex-col gap-y-3">
+          <BlurFade delay={BLUR_FADE_DELAY * 5}>
+            <h2 className="text-xl font-bold">education</h2>
+          </BlurFade>
+          {DATA.education.map((education, id) => (
+            <BlurFade
+              key={education.school}
+              delay={BLUR_FADE_DELAY * 6 + id * 0.05}
+            >
+              <ResumeCard
+                key={education.school}
+                href={education.href}
+                logoUrl={education.logoUrl}
+                altText={education.school}
+                title={education.school}
+                subtitle={education.degree}
+                period={`${education.start} - ${education.end}`}
+              />
+            </BlurFade>
+          ))}
+        </div>
+      </section>
+
       <section id="skills">
         <div className="flex min-h-0 flex-col gap-y-3 mb-10">
-          <BlurFade delay={BLUR_FADE_DELAY * 5}>
+          <BlurFade delay={BLUR_FADE_DELAY * 7}>
             <h2 className="text-xl font-bold">skills</h2>
           </BlurFade>
           <div className="flex flex-wrap gap-1">
@@ -68,11 +93,11 @@ export default function Page() {
         </div>
       </section>
       
-      <BlurFade delay={BLUR_FADE_DELAY * 6}><div className="border-t-2 border-dashed border-gray-300 mx-auto w-1/2"></div></BlurFade>
+      <BlurFade delay={BLUR_FADE_DELAY * 8}><div className="border-t-2 border-dashed border-gray-300 mx-auto w-1/2"></div></BlurFade>
       
       <section id="projects">
         <div className="space-y-12 w-full py-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 7}>
+          <BlurFade delay={BLUR_FADE_DELAY * 9}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
@@ -93,7 +118,7 @@ export default function Page() {
             {DATA.projects.map((project, id) => (
               <BlurFade
                 key={project.title}
-                delay={BLUR_FADE_DELAY * 8 + id * 0.05}
+                delay={BLUR_FADE_DELAY * 10 + id * 0.05}
               >
                 <ProjectCard
                   href={project.href}
@@ -112,11 +137,11 @@ export default function Page() {
         </div>
       </section>
 
-      <BlurFade delay={BLUR_FADE_DELAY * 9}><div className="border-t-2 border-dashed border-gray-300 mx-auto w-1/2"></div></BlurFade>
+      <BlurFade delay={BLUR_FADE_DELAY * 11}><div className="border-t-2 border-dashed border-gray-300 mx-auto w-1/2"></div></BlurFade>
 
       <section id="contact">
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 10}>
+          <BlurFade delay={BLUR_FADE_DELAY * 12}>
             <div className="space-y-3">
               <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
                 contact

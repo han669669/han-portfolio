@@ -20,6 +20,7 @@ export const DATA = {
     "Bootstrap",
     "React",
     "Vite",
+    "Vue.js",
     "Next.js",
     "Node.js",
     "npm",
@@ -89,6 +90,40 @@ export const DATA = {
       },
     },
   },
+  education: [
+    {
+      school: "Udemy",
+      href: "https://www.udemy.com/certificate/UC-2KAXYRQI/",
+      degree: "Vue JS 2.0 - Mastering Web Apps",
+      logoUrl: "/udemy.svg",
+      start: "2018",
+      end: "2018",
+    },
+    {
+      school: "Udemy ",
+      href: "https://www.udemy.com/certificate/UC-HZG7I58J/",
+      degree: "The Web Developer Bootcamp",
+      logoUrl: "/udemy.svg",
+      start: "2018",
+      end: "2018",
+    },
+    {
+      school: "freeCodeCamp",
+      href: "https://www.freecodecamp.org/hanlinc",
+      degree: "Full Stack Web Development Certification",
+      logoUrl: "/freecodecamp.svg",
+      start: "2017",
+      end: "2017",
+    },
+    {
+      school: "NovoEd",
+      href: "https://deloitte.novoed.com/#!/courses/cognitive-technology-2016a/statements/1078274",
+      degree: "Cognitive Technologies: The real opportunities for business",
+      logoUrl: "/novoed.svg",
+      start: "2016",
+      end: "2016",
+    },
+  ],
   projects: [
     {
       title: "Malaysia Home Finder",

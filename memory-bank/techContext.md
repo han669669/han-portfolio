@@ -2,10 +2,18 @@
 
 ## Technologies Used
 
+- React
+- shadcn
+- Framer Motion
+- Magic UI
 - Next.js
 - TypeScript
 - Tailwind CSS
-- MDX
+- Google Gemini 2.0
+- VSCode
+- Cline
+- Vercel
+- Lucide React
 
 ## Development Setup
 
