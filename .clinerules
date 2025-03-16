@@ -6,6 +6,8 @@
 
 ## User Preferences and Workflow
 
+- Storing resume data in a separate file (e.g., `src/data/resume.tsx`) and importing it into the main page.
+
 ## Known Challenges
 
 ## Evolution of Project Decisions

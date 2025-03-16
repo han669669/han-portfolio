@@ -14,7 +14,11 @@
 ## Next Steps
 
 - Review the remaining memory bank files: `systemPatterns.md`, `techContext.md`, and `progress.md`.
-- Update the `.clinerules` file.
+
+## Recent Changes
+
+- Updated URLs in `src/data/resume.tsx`.
+- Updated `.clinerules` file.
 
 ## Active Decisions and Considerations
 

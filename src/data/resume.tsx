@@ -4,7 +4,7 @@ import { HomeIcon, NotebookIcon } from "lucide-react";
 export const DATA = {
   name: "Han Lin Chong",
   initials: "Han",
-  url: "https://chonghanlin.onrender.com",
+  url: "https://www.craftedbyhan.xyz/",
   location: "Singapore / Kuala Lumpur",
   locationLink: "https://www.google.com/maps/place/singapore",
   description:
@@ -35,7 +35,10 @@ export const DATA = {
     "Cloudflare",
     "Render",
     "Vercel",
+    "Porkbun.com",
+    "Imgur API",
     "Git",
+    "Github",
     "Claude Sonnet 3.5 / 3.7",
     "Meta AI Llama 3.1 / 3.3",
     "Deepseek R1 / V3",
@@ -83,7 +86,7 @@ export const DATA = {
       // },
       email: {
         name: "Send Email",
-        url: "mailto:gamingcomputing@outlook.com",
+        url: "mailto:contact@craftedbyhan.xyz",
         icon: Icons.email,
 
         navbar: true,
@@ -127,7 +130,7 @@ export const DATA = {
   projects: [
     {
       title: "Malaysia Home Finder",
-      href: "https://luxuryhomes.pages.dev",
+      href: "https://malaysiahomefinder.craftedbyhan.xyz/",
       dates: "Dec 2024 - Present",
       active: true,
       description:
@@ -148,7 +151,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://luxuryhomes.pages.dev",
+          href: "https://malaysiahomefinder.craftedbyhan.xyz/",
           icon: <Icons.globe className="size-3" />,
         },
       ],
@@ -158,7 +161,7 @@ export const DATA = {
     },
     {
       title: "Photography Showcase",
-      href: "https://chonghanlin.onrender.com",
+      href: "https://chonghanlin.craftedbyhan.xyz/",
       dates: "May 2024 - June 2024",
       active: true,
       description:
@@ -177,7 +180,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://chonghanlin.onrender.com",
+          href: "https://chonghanlin.craftedbyhan.xyz/",
           icon: <Icons.globe className="size-3" />,
         },
         {
@@ -191,7 +194,7 @@ export const DATA = {
     },
     {
       title: "LLM Leaderboard",
-      href: "https://webdev-arena-llm-leaderboard.vercel.app/",
+      href: "https://webdevllmleaderboard.craftedbyhan.xyz/",
       dates: "March 2025 - Present",
       active: true,
       description:
@@ -212,7 +215,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://webdev-arena-llm-leaderboard.vercel.app/",
+          href: "https://webdevllmleaderboard.craftedbyhan.xyz/",
           icon: <Icons.globe className="size-3" />,
         },
         {
@@ -226,7 +229,7 @@ export const DATA = {
     },
     {
       title: "Voice Visualizer",
-      href: "https://voice-mode.onrender.com",
+      href: "https://voicemode.craftedbyhan.xyz/",
       dates: "March 2025 - March 2025",
       active: true,
       description:
@@ -246,7 +249,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://voice-mode.onrender.com",
+          href: "https://voicemode.craftedbyhan.xyz/",
           icon: <Icons.globe className="size-3" />,
         },
         {
@@ -261,7 +264,7 @@ export const DATA = {
     },
     {
       title: "Personal Portfolio",
-      href: "https://hanlin-portfolio.vercel.app",
+      href: "https://www.craftedbyhan.xyz/",
       dates: "March 2025 - Present",
       active: true,
       description:
@@ -284,7 +287,7 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://hanlin-portfolio.vercel.app",
+          href: "https://www.craftedbyhan.xyz/",
           icon: <Icons.globe className="size-3" />,
         },
         {
