@@ -23,6 +23,7 @@ export const DATA = {
     "Vue.js",
     "Next.js",
     "Node.js",
+    "Express.js",
     "npm",
     "Tailwind CSS",
     "Magic UI",
@@ -39,10 +40,12 @@ export const DATA = {
     "Imgur API",
     "Git",
     "Github",
+    "OpenRouter API",
     "Claude Sonnet 3.5 / 3.7",
     "Meta AI Llama 3.1 / 3.3",
     "Deepseek R1 / V3",
     "Google Gemini 2.0",
+    "liquid/lfm-7b",
     "Windsurf AI Code Editor",
     "VSCode",
     "Cline",
@@ -134,7 +137,7 @@ export const DATA = {
       dates: "Dec 2024 - Present",
       active: true,
       description:
-        "Integrating [Windsurf AI Code Editor](https://codeium.com/windsurf) into my workflow. \n\n I decided to build a modern, high-performance web application for showcasing luxury condos and serviced apartments, built with cutting-edge web technologies.",
+        "Integrating [Windsurf AI Code Editor](https://codeium.com/windsurf) into my workflow. \n\ndecided to build a modern, high-performance web application for showcasing luxury condos and serviced apartments, built with cutting-edge web technologies. \n\naiming to build a platform that's super easy to use, where people can browse through beautiful properties and discover their perfect homes.",
       technologies: [
         "React",
         "Typescript",
@@ -160,12 +163,49 @@ export const DATA = {
         "/malaysiahomefinder.mp4",
     },
     {
+      title: "SaaS Recommendation Engine",
+      href: "https://saasvibesearch.craftedbyhan.xyz/",
+      dates: "March 2025 - Present",
+      active: true,
+      description:
+        "objective: Ultilize AI model [_(liquid/lfm-7b)_](https://openrouter.ai/liquid/lfm-7b) via OpenRouter API in a web application to recommend SaaS solutions based on user queries. \n\nThe engine uses natural language processing (NLP) and AI to analyze user queries, identify relevant categories, and recommend software from a large database. \n\nIt's built for scalability with efficient search algorithms and AI-driven ranking for fast and accurate suggestions.",
+      technologies: [
+        "HTML",
+        "CSS",
+        "Javascript",
+        "Express.js",
+        "Node.js",
+        "compromise(nlp package)",
+        "minisearch(text search engine)",
+        "OpenRouter API",
+        "liquid/lfm-7b",
+        "VSCode",
+        "Cline",
+        "Vercel",
+        "Gemini 2.0",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://saasvibesearch.craftedbyhan.xyz/",
+          icon: <Icons.globe className="size-3" />,
+        },        {
+          type: "Source",
+          href: "https://github.com/han669669/saas-search",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video:
+        "/saasvibesearch.mp4",
+    },
+    {
       title: "Photography Showcase",
       href: "https://chonghanlin.craftedbyhan.xyz/",
       dates: "May 2024 - June 2024",
       active: true,
       description:
-        "Showcasing my photography journey in Singapore, capturing the beauty of the city-state through my lens. \n\nBuilt with simplicity in mind, and also features an appointment scheduling section, allowing users to book a photoshoot with me directly. \n\nPhotos are fetched using the Imgur API. ",
+        "Showcasing my photography journey in Singapore, capturing the beauty of the city-state through my lens. \n\nBuilt with simplicity in mind, and also features an appointment scheduling section, allowing users to book a photoshoot with me directly. \n\nPhotos are fetched using the [Imgur API](https://apidocs.imgur.com/). ",
       technologies: [
         "HTML",
         "CSS",
@@ -198,7 +238,7 @@ export const DATA = {
       dates: "March 2025 - Present",
       active: true,
       description:
-        "This project recreates the WebDev Arena Leaderboard to provide a more comprehensive comparison of Large Language Models (LLMs) based on their web development performance. \n\nWebDev Arena is a real-time AI coding competition where models go head-to-head in web development challenges, developed by LMArena. \n\nThe recreated leaderboard includes input and output costs, providing a more detailed assessment of LLMs' performance.",
+        "This project recreates the [WebDev Arena Leaderboard](https://web.lmarena.ai/leaderboard) to provide a more comprehensive comparison of Large Language Models (LLMs) based on their web development performance. \n\nThe recreated leaderboard includes input and output costs, providing a more detailed assessment of LLMs' performance.",
       technologies: [
         "Next.js",
         "React",
@@ -233,7 +273,7 @@ export const DATA = {
       dates: "March 2025 - March 2025",
       active: true,
       description:
-        "A mesmerizing voice-controlled particle visualizer that transforms your voice input into a dynamic and interactive visual experience. Using WebGL and Three.js, \n\nthe application creates a sphere of particles that react to the amplitude of your voice. \n\nThe particles dance and shift in real-time, responding to your every word and sound.",
+        "A mesmerizing voice-controlled particle visualizer that transforms your voice input into a dynamic and interactive visual experience. Using WebGL and [Three.js](https://threejs.org/), \n\nthe application creates a sphere of particles that react to the amplitude of your voice. \n\nThe particles dance and shift in real-time, responding to your every word and sound.",
       technologies: [
         "HTML",
         "CSS",
@@ -268,7 +308,7 @@ export const DATA = {
       dates: "March 2025 - Present",
       active: true,
       description:
-        "A personal portfolio website that includes a blog and is optimized for different devices and deployment platform. The website has a responsive layout and supports both light and dark mode. \n\nIt is designed for performance and easy deployment to vercel, making it a great starting point for anyone looking to build a fast and scalable portfolio with a blog. ",
+        "A personal portfolio website that includes a blog and is optimized for different devices and deployment platform. The website has a responsive layout and supports both light and dark mode. \n\nIt is designed for performance and easy deployment to [vercel](https://vercel.com/), making it a great starting point for anyone looking to build a fast and scalable portfolio with a blog. ",
       technologies: [
         "Next.js",
         "React",

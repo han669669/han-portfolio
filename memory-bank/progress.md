@@ -9,6 +9,8 @@
 
 ## What's Left to Build
 
+- None
+
 ## Current Status
 
 - The memory bank is initialized, education details and skills have been added, and the project has been completed to presentable production standards.

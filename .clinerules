@@ -15,3 +15,4 @@
 ## Tool Usage Patterns
 
 - Using write_to_file to overwrite file contents when replace_in_file fails to replace all occurrences.
+- Using write_to_file to update memory bank files.
