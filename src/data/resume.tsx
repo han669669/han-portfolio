@@ -97,6 +97,22 @@ export const DATA = {
     },
   },
   education: [
+    // {
+    //   school: "DeepLearning.AI",
+    //   href: "/ai-for-everyone-completion.png",
+    //   degree: "AI Vibe Coding 101 with Replit in collaboration with Andrew Ng",
+    //   logoUrl: "/deeplearning.svg",
+    //   start: "2025",
+    //   end: "2025",
+    // },
+    {
+      school: "Coursera ",
+      href: "/ai-for-everyone-completion.png",
+      degree: "AI For Everyone by former Stanford Professor Andrew Ng",
+      logoUrl: "/coursera.svg",
+      start: "2025",
+      end: "2025",
+    },
     {
       school: "Udemy",
       href: "https://www.udemy.com/certificate/UC-2KAXYRQI/",
@@ -128,6 +144,14 @@ export const DATA = {
       logoUrl: "/novoed.svg",
       start: "2016",
       end: "2016",
+    },
+    {
+      school: "Coursera",
+      href: "https://www.coursera.org/learner/han669",
+      degree: "Learning How to Learn: Powerful mental tools to help you master tough subjects",
+      logoUrl: "/coursera.svg",
+      start: "2015",
+      end: "2015",
     },
   ],
   projects: [
@@ -339,6 +363,39 @@ export const DATA = {
       image: "",
       video:
         "/han-portfolio.mp4",
+    },
+  ],
+  hackathons: [
+    {
+      title: "Bolt.new Build a Hackathon Landing Page Competition 2025",
+      dates: "March 19th - 22nd, 2025",
+      location: "Worldwide, Online",
+      description: "built an old school style hackathon landing page for the competition, won 200 USD equivalent in prizes.",
+      image:
+        "/boltnew.png",
+      win: "Participation Prize",
+      links: [
+        {
+          title: "deployed website",
+          icon: <Icons.globe className="h-4 w-4" />,
+          href: "https://bolt-new-hackathon-2025-oldschool.craftedbyhan.xyz/",
+        },
+        {
+          title: "submission tweet",
+          icon: <Icons.x className="h-4 w-4" />,
+          href: "https://x.com/bbqbbq669/status/1903184286301507773?s=46",
+        },
+        {
+          title: "prizes tweet",
+          icon: <Icons.x className="h-4 w-4" />,
+          href: "https://x.com/boltdotnew/status/1904928557480231158?s=46",
+        },
+        {
+          title: "source code",
+          icon: <Icons.github className="h-4 w-4" />,
+          href: "https://github.com/han669669/bolt-new-hackathon-2025",
+        },
+      ],
     },
   ],
 } as const;

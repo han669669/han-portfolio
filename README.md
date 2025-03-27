@@ -1,3 +1,11 @@
+<p align="center">
+  Take a look at a brief demo of the portfolio:
+</p>
+
+<p align="center">
+  <img src="./public/han-portfolio.gif" alt="Portfolio Demo">
+</p>
+
 # Portfolio
 
 A personal portfolio template built with Next.js, designed to showcase your work, skills, and experience. It includes a blog and is optimized for different devices and deployment platforms. The template also comes with a responsive layout, and support for both light and dark mode. The template is easy to customize and comes with a set of pre-built components and utilities to help you quickly build your portfolio website.

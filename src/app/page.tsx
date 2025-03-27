@@ -96,7 +96,7 @@ export default function Page() {
       <BlurFade delay={BLUR_FADE_DELAY * 8}><div className="border-t-2 border-dashed border-gray-300 mx-auto w-1/2"></div></BlurFade>
       
       <section id="projects">
-        <div className="space-y-12 w-full py-12">
+        <div className="space-y-12 w-full pt-8 pb-12">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -139,9 +139,54 @@ export default function Page() {
 
       <BlurFade delay={BLUR_FADE_DELAY * 11}><div className="border-t-2 border-dashed border-gray-300 mx-auto w-1/2"></div></BlurFade>
 
-      <section id="contact">
-        <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
+      <section id="hackathons">
+        <div className="space-y-12 w-full pt-9 pb-12">
           <BlurFade delay={BLUR_FADE_DELAY * 12}>
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-3">
+                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                  hackathons
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  quickly make stuff happen.
+                </h2>
+                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  new to hackathons and still learning the ropes.<br />
+                  i&#39;ve only ever attended {DATA.hackathons.length}+ hackathons so far, but i&#39;m
+                  excited to learn more, build more, and gain more experience.<br />
+                  as being part of a community that&#39;s able to build such incredible, useful products in such a short time span of 2-3 days is really
+                  inspiring, extremely eager to continue learning and growing !
+                </p>
+              </div>
+            </div>
+          </BlurFade>
+          <BlurFade delay={BLUR_FADE_DELAY * 13}>
+            <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
+              {DATA.hackathons.map((project, id) => (
+                <BlurFade
+                  key={project.title + project.dates}
+                  delay={BLUR_FADE_DELAY * 14 + id * 0.05}
+                >
+                  <HackathonCard
+                    title={project.title}
+                    description={project.description}
+                    location={project.location}
+                    dates={project.dates}
+                    image={project.image}
+                    links={project.links}
+                  />
+                </BlurFade>
+              ))}
+            </ul>
+          </BlurFade>
+        </div>
+      </section>
+
+      <BlurFade delay={BLUR_FADE_DELAY * 15}><div className="border-t-2 border-dashed border-gray-300 mx-auto w-1/2"></div></BlurFade>
+
+      <section id="contact">
+        <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full pt-8 pb-12">
+          <BlurFade delay={BLUR_FADE_DELAY * 16}>
             <div className="space-y-3">
               <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
                 contact
@@ -163,6 +208,11 @@ export default function Page() {
           </BlurFade>
         </div>
       </section>
+      <footer className="w-full py-6 text-center text-sm text-muted-foreground">
+        <small>
+          © {new Date().getFullYear()} {DATA.name}. all rights reserved.
+        </small>
+      </footer>
     </main>
   );
 }
