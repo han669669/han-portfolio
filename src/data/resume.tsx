@@ -44,20 +44,23 @@ export const DATA = {
     "Claude Sonnet 3.5 / 3.7",
     "Meta AI Llama 3.1 / 3.3",
     "Deepseek R1 / V3",
-    "Google Gemini 2.0",
+    "Google Gemini 2.0 / 2.5",
     "liquid/lfm-7b",
     "Windsurf AI Code Editor",
     "VSCode",
     "Cline",
+    "Roo Code",
     "Bolt.new",
-    "v0.dev"
+    "v0.dev",
+    "Nebius AI Studio API",
+    "Github Copilot"
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
-    email: "gamingcomputing@outlook.com",
+    email: "contact@craftedbyhan.xyz",
     tel: "+65 82116596",
     social: {
       GitHub: {
@@ -99,7 +102,7 @@ export const DATA = {
   education: [
     // {
     //   school: "DeepLearning.AI",
-    //   href: "/ai-for-everyone-completion.png",
+    //   href: "/vibe-coding-completion.png",
     //   degree: "AI Vibe Coding 101 with Replit in collaboration with Andrew Ng",
     //   logoUrl: "/deeplearning.svg",
     //   start: "2025",
@@ -107,8 +110,8 @@ export const DATA = {
     // },
     {
       school: "Coursera ",
-      href: "/ai-for-everyone-completion.png",
-      degree: "AI For Everyone by former Stanford Professor Andrew Ng",
+      href: "/ai-and-gen-ai-completion.png",
+      degree: "AI & Generative AI For Everyone by former Stanford Professor Andrew Ng",
       logoUrl: "/coursera.svg",
       start: "2025",
       end: "2025",
