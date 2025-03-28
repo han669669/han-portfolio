@@ -40,6 +40,7 @@ export const DATA = {
     "Imgur API",
     "Git",
     "Github",
+    "PostgreSQL",
     "OpenRouter API",
     "Claude Sonnet 3.5 / 3.7",
     "Meta AI Llama 3.1 / 3.3",
@@ -53,7 +54,8 @@ export const DATA = {
     "Bolt.new",
     "v0.dev",
     "Nebius AI Studio API",
-    "Github Copilot"
+    "Github Copilot",
+    "Replit"
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -100,14 +102,14 @@ export const DATA = {
     },
   },
   education: [
-    // {
-    //   school: "DeepLearning.AI",
-    //   href: "/vibe-coding-completion.png",
-    //   degree: "AI Vibe Coding 101 with Replit in collaboration with Andrew Ng",
-    //   logoUrl: "/deeplearning.svg",
-    //   start: "2025",
-    //   end: "2025",
-    // },
+    {
+      school: "DeepLearning.AI",
+      href: "https://learn.deeplearning.ai/accomplishments/63711fc4-b69f-410e-aa5d-07982ea43e62",
+      degree: "AI Vibe Coding 101 with Replit in collaboration with Andrew Ng",
+      logoUrl: "/deeplearning.svg",
+      start: "2025",
+      end: "2025",
+    },
     {
       school: "Coursera ",
       href: "/ai-and-gen-ai-completion.png",
