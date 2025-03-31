@@ -154,7 +154,7 @@ export default function Page() {
                   new to hackathons and still learning the ropes.<br />
                   i&#39;ve only ever attended {DATA.hackathons.length}+ hackathons so far, but i&#39;m
                   excited to learn more, build more, and gain more experience.<br />
-                  as being part of a community that&#39;s able to build such incredible, useful products in such a short time span of 2-3 days is really
+                  as being part of a community that&#39;s able to build such incredible, useful products in such a short time span of 1 to 3 days is really
                   inspiring, extremely eager to continue learning and growing !
                 </p>
               </div>
