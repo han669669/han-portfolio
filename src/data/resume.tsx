@@ -38,6 +38,7 @@ export const DATA = {
     "Cloudflare",
     "Render",
     "Vercel",
+    "Appwrite",
     "Porkbun.com",
     "Imgur API",
     "Git",
@@ -372,6 +373,71 @@ export const DATA = {
       image: "",
       video:
         "/han-portfolio.mp4",
+    },
+    {
+      title: "CRUD React App w/ auth",
+      href: "https://todo.craftedbyhan.xyz/",
+      dates: "April 2025 - April 2025",
+      active: true,
+      description:
+        "wanted to try out [Appwrite](https://appwrite.io/) backend as a service platform, built with roo code + deepseek v3 0324 / quasar alpha in vscode, used heroui chat to quickly generate frontend ui with landing page. \n\ntested working crud operations with drag and drop feature synced to database, appwrite auth for email+pw / email otp login or signup, hosted on vercel.",
+      technologies: [
+        "React",
+        "Vite",
+        "Tailwind CSS",
+        "HeroUI",
+        "Appwrite",
+        "Vercel",
+        "Git",
+        "Deepseek-v3-0324",
+        "quasar-alpha",
+        "VSCode",
+        "Roo Code"
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://todo.craftedbyhan.xyz/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/han669669/todo-app",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video:
+        "/todo.mp4",
+    },
+    {
+      title: "AI Chat Web App",
+      href: "https://chatapp.craftedbyhan.xyz/",
+      dates: "April 2025 - April 2025",
+      active: true,
+      description:
+        "simple AI chat app with world's best-in-class multilingual language llm model (liquid/lfm-7b), gave agent [openrouter's](https://openrouter.ai/) docs via llms-full.txt to integrate their api into this chat web app. \n\nappwrite functions for hosting, used deepseek v3 0324 with roo code for development.",
+      technologies: [
+        "HTML",
+        "CSS",
+        "Javascript",
+        "Appwrite",
+        "liquid/lfm-7b",
+        "Openrouter API",
+        "VSCode",
+        "Roo Code",
+        "Deepseek-v3-0324"
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://chatapp.craftedbyhan.xyz/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "",
+      video:
+        "/chatapp.mp4",
     },
   ],
   hackathons: [

@@ -1,0 +1,31 @@
+flowchart TD
+    subgraph App
+        direction TB
+        A["RootLayout layout.tsx"]
+        B["Page page.tsx"]
+    end
+
+    subgraph Providers
+        ThemeProvider
+        TooltipProvider
+        Analytics
+    end
+
+    subgraph Data
+        DATA["src/data/resume.tsx"]
+    end
+
+    A --> Providers
+    Providers --> B
+
+    B -->|renders| Hero
+    B --> About
+    B --> Education
+    B --> Skills
+    B --> Projects
+    B --> Hackathons
+    B --> Contact
+    B --> Footer
+
+    DATA --> A
+    DATA --> B
