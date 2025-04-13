@@ -60,7 +60,11 @@ export const DATA = {
     "Nebius AI Studio API",
     "Github Copilot",
     "Replit",
-    "Qwen by Alibaba Cloud"
+    "Qwen by Alibaba Cloud",
+    "DeepSite",
+    "Cerebras API",
+    "Netlify",
+    "Hugging Face"
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -438,6 +442,81 @@ export const DATA = {
       image: "",
       video:
         "/chatapp.mp4",
+    },
+    {
+      title: "imHungryAF - Good Food Near You",
+      href: "https://imhungryaf.pages.dev/",
+      dates: "April 2025 - Present",
+      active: true,
+      description:
+        "had this problem while traveling in kuala lumpur malaysia, made this location based food recommender to solve issue. spent 4 hrs 35 mins from idea concept to working mvp build, just wow 😯 \n\nworkflow goes like this, _qwen 2.5 max > write fsd > [deepsite](https://huggingface.co/spaces/enzostvs/deepsite) > vscode + roo code > cloudflare pages_ \n\ntop Youtube Food influencers approved recommendations in Singapore & Kuala Lumpur within a 60 minutes drive. Find best hawker stalls, mamak shops and hidden gems near you !",
+      technologies: [
+        "React",
+        "Vite",
+        "Tailwind CSS",
+        "Javascript",
+        "DeepSite",
+        "Qwen 2.5 Max",
+        "Cloudflare",
+        "Deepseek-v3-0324",
+        "quasar-alpha",
+        "VSCode",
+        "Roo Code",
+        "Git"
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://imhungryaf.pages.dev/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/han669669/foodie-finds",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video:
+        "/imhungryaf.mp4",
+    },
+    {
+      title: "Argue w/ AI",
+      href: "https://toxic-bot.netlify.app/",
+      dates: "April 2025 - April 2025",
+      active: true,
+      description:
+        "argue with an ai chatbot, made during Cerebras.ai & HuggingFace's [8 hours Hackathon](https://lu.ma/eihdh2gd) @ 12/13 april 2025. \n\napplied to hackathon and was granted access to cerebras.ai blazing fast ~2600 tokens/s Llama 4 Scout :O \n\n_qwen 2.5 max > write fsd > deepsite > windsurf + deepseek / gemini > netlify_",
+      technologies: [
+        "HTML",
+        "CSS",
+        "Javascript",
+        "Tailwind CSS",
+        "Qwen 2.5 Max",
+        "DeepSite",
+        "Cerebras API",
+        "Llama 4 Scout",
+        "Git",
+        "Netlify",
+        "Windsurf",
+        "Deepseek-v3-0324",
+        "Gemini 2.5 Pro"
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://toxic-bot.netlify.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/han669669/toxic-bot",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video:
+        "/toxic-bot.mp4",
     },
   ],
   hackathons: [
