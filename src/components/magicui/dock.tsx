@@ -48,8 +48,19 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
     return (
       <motion.div
         ref={ref}
-        onMouseMove={(e) => mousex.set(e.pageX)}
-        onMouseLeave={() => mousex.set(Infinity)}
+        onPointerMove={(e) => {
+          // Only enable magnification for mouse pointers (desktop). Disable on touch (mobile).
+          if (e.pointerType === "mouse") {
+            mousex.set(e.pageX);
+          }
+        }}
+        onPointerLeave={() => mousex.set(Infinity)}
+        onPointerDown={(e) => {
+          // Ensure no magnification is triggered on touch interactions
+          if (e.pointerType !== "mouse") {
+            mousex.set(Infinity);
+          }
+        }}
         {...props}
         className={cn(dockVariants({ className }))}
       >
