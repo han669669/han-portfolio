@@ -101,11 +101,10 @@ export const DATA = {
       //   icon: Icons.youtube,
       //   navbar: true,
       // },
-      email: {
+      Email: {
         name: "Send Email",
         url: "mailto:contact@craftedbyhan.xyz",
         icon: Icons.email,
-
         navbar: true,
       },
     },

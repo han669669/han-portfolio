@@ -5,7 +5,12 @@ import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
+import { OptimizedImage } from "@/components/optimized-image";
 import { DATA } from "@/data/resume";
+import { projects } from "@/data/projects";
+import { education } from "@/data/education";
+import { skills } from "@/data/skills";
+import { hackathons } from "@/data/hackathons";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
@@ -59,19 +64,19 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
             <h2 className="text-xl font-bold">education</h2>
           </BlurFade>
-          {DATA.education.map((education, id) => (
+          {education.map((edu, id) => (
             <BlurFade
-              key={education.school}
+              key={edu.school}
               delay={BLUR_FADE_DELAY * 6 + id * 0.05}
             >
               <ResumeCard
-                key={education.school}
-                href={education.href}
-                logoUrl={education.logoUrl}
-                altText={education.school}
-                title={education.school}
-                subtitle={education.degree}
-                period={`${education.start} - ${education.end}`}
+                key={edu.school}
+                href={edu.href}
+                logoUrl={edu.logoUrl}
+                altText={edu.school}
+                title={edu.school}
+                subtitle={edu.degree}
+                period={`${edu.start} - ${edu.end}`}
               />
             </BlurFade>
           ))}
@@ -84,7 +89,7 @@ export default function Page() {
             <h2 className="text-xl font-bold">skills</h2>
           </BlurFade>
           <div className="flex flex-wrap gap-1">
-            {DATA.skills.map((skill, id) => (
+            {skills.map((skill, id) => (
               <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.01}>
                 <Badge key={skill}>{skill}</Badge>
               </BlurFade>
@@ -115,7 +120,7 @@ export default function Page() {
             </div>
           </BlurFade>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
-            {DATA.projects.map((project, id) => (
+            {projects.map((project, id) => (
               <BlurFade
                 key={project.title}
                 delay={BLUR_FADE_DELAY * 10 + id * 0.05}
@@ -152,7 +157,7 @@ export default function Page() {
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   new to hackathons and still learning the ropes.<br />
-                  i&#39;ve only ever attended {DATA.hackathons.length}+ hackathons so far, but i&#39;m
+                  i&#39;ve only ever attended {hackathons.length}+ hackathons so far, but i&#39;m
                   excited to learn more, build more, and gain more experience.<br />
                   as being part of a community that&#39;s able to build such incredible, useful products in such a short time span of 1 to 3 days is really
                   inspiring, extremely eager to continue learning and growing !
@@ -162,18 +167,18 @@ export default function Page() {
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 13}>
             <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
-              {DATA.hackathons.map((project, id) => (
+              {hackathons.map((hackathon, id) => (
                 <BlurFade
-                  key={project.title + project.dates}
+                  key={hackathon.title + hackathon.dates}
                   delay={BLUR_FADE_DELAY * 14 + id * 0.05}
                 >
                   <HackathonCard
-                    title={project.title}
-                    description={project.description}
-                    location={project.location}
-                    dates={project.dates}
-                    image={project.image}
-                    links={project.links}
+                    title={hackathon.title}
+                    description={hackathon.description}
+                    location={hackathon.location}
+                    dates={hackathon.dates}
+                    image={hackathon.image}
+                    links={hackathon.links}
                   />
                 </BlurFade>
               ))}

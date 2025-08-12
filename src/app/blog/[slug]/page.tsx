@@ -4,11 +4,14 @@ import { formatDate } from "@/lib/utils";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
-import { GetStaticProps } from 'next';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
 }
+
+// Pre-render all blog posts at build time
+export const dynamicParams = false; // Return 404 for unknown slugs
+export const revalidate = 3600; // Revalidate every hour
 
 export async function generateStaticParams() {
   const posts = await getBlogPosts();

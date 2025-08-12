@@ -7,9 +7,10 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import { LazyVideo } from "@/components/lazy-video";
+import { OptimizedImage } from "@/components/optimized-image";
 
 interface Props {
   title: string;
@@ -51,22 +52,24 @@ export function ProjectCard({
         className={cn("block cursor-pointer", className)}
       >
         {video && (
-          <video
+          <LazyVideo
             src={video}
+            className="pointer-events-none mx-auto h-40 w-full object-cover object-top"
             autoPlay
             loop
             muted
             playsInline
-            className="pointer-events-none mx-auto h-40 w-full object-cover object-top" // needed because random black line at bottom of video
           />
         )}
         {image && (
-          <Image
+          <OptimizedImage
             src={image}
             alt={title}
             width={500}
             height={300}
             className="h-40 w-full overflow-hidden object-cover object-top"
+            sizes="(max-width: 640px) 100vw, 50vw"
+            quality={85}
           />
         )}
       </Link>
