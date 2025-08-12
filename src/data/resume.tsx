@@ -1,3 +1,7 @@
+/**
+ * 1. Personal Information (@/data/resume.tsx): To change your name, summary, avatar, or contact links, you should edit this file.
+ * 2. List-Based Content (@/data/projects.tsx, etc.): To add, remove, or edit a project, skill, education entry, or hackathon, you should edit the corresponding file in the src/data/ directory.
+ */
 import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
 
