@@ -14,6 +14,7 @@ import { hackathons } from "@/data/hackathons";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
+import { PricingSection } from "@/components/pricing-section"; 
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -59,15 +60,19 @@ export default function Page() {
         </BlurFade>
       </section>
 
+      <BlurFade delay={BLUR_FADE_DELAY * 5}>
+        <PricingSection />
+      </BlurFade>
+
       <section id="education">
         <div className="flex min-h-0 flex-col gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 5}>
+          <BlurFade delay={BLUR_FADE_DELAY * 6}>
             <h2 className="text-xl font-bold">education</h2>
           </BlurFade>
           {education.map((edu, id) => (
             <BlurFade
               key={edu.school}
-              delay={BLUR_FADE_DELAY * 6 + id * 0.05}
+              delay={BLUR_FADE_DELAY * 7 + id * 0.05}
             >
               <ResumeCard
                 key={edu.school}
@@ -85,12 +90,12 @@ export default function Page() {
 
       <section id="skills">
         <div className="flex min-h-0 flex-col gap-y-3 mb-10">
-          <BlurFade delay={BLUR_FADE_DELAY * 7}>
+          <BlurFade delay={BLUR_FADE_DELAY * 8}>
             <h2 className="text-xl font-bold">skills</h2>
           </BlurFade>
           <div className="flex flex-wrap gap-1">
             {skills.map((skill, id) => (
-              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.01}>
+              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 11 + id * 0.01}>
                 <Badge key={skill}>{skill}</Badge>
               </BlurFade>
             ))}
@@ -98,11 +103,11 @@ export default function Page() {
         </div>
       </section>
       
-      <BlurFade delay={BLUR_FADE_DELAY * 8}><div className="border-t-2 border-dashed border-gray-300 mx-auto w-1/2"></div></BlurFade>
+      <BlurFade delay={BLUR_FADE_DELAY * 9}><div className="border-t-2 border-dashed border-gray-300 mx-auto w-1/2"></div></BlurFade>
       
       <section id="projects">
         <div className="space-y-12 w-full pt-8 pb-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 9}>
+          <BlurFade delay={BLUR_FADE_DELAY * 10}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
@@ -123,7 +128,7 @@ export default function Page() {
             {projects.map((project, id) => (
               <BlurFade
                 key={project.title}
-                delay={BLUR_FADE_DELAY * 10 + id * 0.05}
+                delay={BLUR_FADE_DELAY * 11 + id * 0.05}
               >
                 <ProjectCard
                   href={project.href}
@@ -142,11 +147,11 @@ export default function Page() {
         </div>
       </section>
 
-      <BlurFade delay={BLUR_FADE_DELAY * 11}><div className="border-t-2 border-dashed border-gray-300 mx-auto w-1/2"></div></BlurFade>
+      <BlurFade delay={BLUR_FADE_DELAY * 12}><div className="border-t-2 border-dashed border-gray-300 mx-auto w-1/2"></div></BlurFade>
 
       <section id="hackathons">
         <div className="space-y-12 w-full pt-9 pb-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 12}>
+          <BlurFade delay={BLUR_FADE_DELAY * 13}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-3">
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
@@ -165,12 +170,12 @@ export default function Page() {
               </div>
             </div>
           </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 13}>
+          <BlurFade delay={BLUR_FADE_DELAY * 14}>
             <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
               {hackathons.map((hackathon, id) => (
                 <BlurFade
                   key={hackathon.title + hackathon.dates}
-                  delay={BLUR_FADE_DELAY * 14 + id * 0.05}
+                  delay={BLUR_FADE_DELAY * 15 + id * 0.05}
                 >
                   <HackathonCard
                     title={hackathon.title}
@@ -187,11 +192,11 @@ export default function Page() {
         </div>
       </section>
 
-      <BlurFade delay={BLUR_FADE_DELAY * 15}><div className="border-t-2 border-dashed border-gray-300 mx-auto w-1/2"></div></BlurFade>
+      <BlurFade delay={BLUR_FADE_DELAY * 16}><div className="border-t-2 border-dashed border-gray-300 mx-auto w-1/2"></div></BlurFade>
 
       <section id="contact">
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full pt-8 pb-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 16}>
+          <BlurFade delay={BLUR_FADE_DELAY * 17}>
             <div className="space-y-3">
               <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
                 contact
@@ -213,11 +218,13 @@ export default function Page() {
           </BlurFade>
         </div>
       </section>
-      <footer className="w-full py-6 text-center text-sm text-muted-foreground">
-        <small>
-          © {new Date().getFullYear()} {DATA.name}. all rights reserved.
-        </small>
-      </footer>
+      <BlurFade delay={BLUR_FADE_DELAY * 18}>
+        <footer className="w-full py-6 text-center text-sm text-muted-foreground">
+          <small>
+            © {new Date().getFullYear()} {DATA.name}. all rights reserved.
+          </small>
+        </footer>
+      </BlurFade>
     </main>
   );
 }

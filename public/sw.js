@@ -80,9 +80,11 @@ function getCacheStrategy(request) {
 
 // Fetch event with multiple caching strategies
 self.addEventListener('fetch', (event) => {
-  // Skip non-GET requests
-  if (event.request.method !== 'GET') return;
-  
+  // Skip non-GET requests and non-HTTP(S) requests
+  if (event.request.method !== 'GET' || !event.request.url.startsWith('http')) {
+    return;
+  }
+
   const { cacheName, strategy } = getCacheStrategy(event.request);
   
   if (strategy === 'cache-first') {

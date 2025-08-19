@@ -113,6 +113,32 @@ export const DATA = {
       },
     },
   },
+  pricing: {
+    valueProposition: "building websites and applications that **directly impact your bottom line 💰** \n\n_~ not just pretty designs_ \n\nevery project focuses on measurable outcomes like **lead generation 📝** \n\n**operational efficiency ⚡️** and **revenue growth 💸**",
+    tiers: [
+      {
+        name: "Launch",
+        price: "USD $1,200",
+        description: "Portfolio / Brochure sites",
+        for: "Creatives, Solopreneurs",
+        features: ["Responsive design", "Good SEO", "5-page max"]
+      },
+      {
+        name: "Pro",
+        price: "USD $3,500",
+        description: "Custom web applications",
+        for: "Tech startups, SMBs",
+        features: ["SaaS components", "API integrations", "Analytics setup"]
+      },
+      {
+        name: "Premium",
+        price: "USD $6,500+",
+        description: "Complex data solutions",
+        for: "Growth-stage companies",
+        features: ["Real-time dashboards", "Custom data visualizations", "Performance optimization"]
+      }
+    ]
+  },
   education: [
     {
       school: "DeepLearning.AI",
