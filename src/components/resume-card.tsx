@@ -41,6 +41,7 @@ export const ResumeCard = ({
   return (
     <Link
       href={href || "#"}
+      prefetch={false}
       className="block cursor-pointer"
       onClick={handleClick}
     >

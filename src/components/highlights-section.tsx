@@ -310,6 +310,24 @@ export default function HighlightsSection() {
               >
                 ›
               </button>
+              {/* Dot indicators over the media area, centered at bottom */}
+              {active !== null && (
+                <div className="pointer-events-auto absolute bottom-3 inset-x-0 flex justify-center gap-2">
+                  {HIGHLIGHTS.map((_, i) => (
+                    <button
+                      key={i}
+                      aria-label={`Open ${HIGHLIGHTS[i].title}`}
+                      onClick={() => setActive(i)}
+                      className={
+                        (i === active
+                          ? "w-2.5 h-2.5 bg-white ring-1 ring-black/30 dark:ring-white/20"
+                          : "w-2 h-2 bg-white/50 hover:bg-white/70 ring-1 ring-black/30 dark:ring-white/20") +
+                        " rounded-full transition-colors"
+                      }
+                    />
+                  ))}
+                </div>
+              )}
             </div>
 
             <div className="p-5 md:p-8 overflow-auto max-h-[calc(85dvh-14rem)] md:max-h-[calc(90vh-50vh)]">
@@ -367,25 +385,6 @@ export default function HighlightsSection() {
                 click outside or press Esc to close
               </p>
             </div>
-
-            {/* Dot indicators */}
-            {active !== null && (
-              <div className="pointer-events-auto absolute bottom-3 inset-x-0 flex justify-center gap-2">
-                {HIGHLIGHTS.map((_, i) => (
-                  <button
-                    key={i}
-                    aria-label={`Open ${HIGHLIGHTS[i].title}`}
-                    onClick={() => setActive(i)}
-                    className={
-                      (i === active
-                        ? "w-2.5 h-2.5 bg-white"
-                        : "w-2 h-2 bg-white/50 hover:bg-white/70") +
-                      " rounded-full transition-colors"
-                    }
-                  />
-                ))}
-              </div>
-            )}
           </div>
         </div>,
         document.body
