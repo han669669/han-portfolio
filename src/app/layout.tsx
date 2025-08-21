@@ -9,6 +9,7 @@ import "./globals.css";
 import { ServiceWorkerRegistration } from "@/components/service-worker-registration";
 import DevConsoleSilencer from "@/components/dev-console-silencer";
 import ProductionAnalytics from "@/components/production-analytics";
+import Script from "next/script";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -69,6 +70,8 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {/* Appointlet widget styles (does not affect your custom button) */}
+        <link href="https://js.appointlet.com/styles.css" rel="stylesheet" />
       </head>
       <body
         className={cn(
@@ -83,6 +86,11 @@ export default function RootLayout({
             {isProd && <ProductionAnalytics />}
             {!isProd && <DevConsoleSilencer />}
             <ServiceWorkerRegistration />
+            {/* Appointlet modal/inline script (no styles) */}
+            <Script
+              src="https://js.appointlet.com/"
+              strategy="afterInteractive"
+            />
           </TooltipProvider>
         </ThemeProvider>
       </body>

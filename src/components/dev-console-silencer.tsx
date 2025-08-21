@@ -9,6 +9,10 @@ export default function DevConsoleSilencer() {
     const patterns = [
       /Error during captureScrollEvent: .*failed to get page/i,
       /Error during captureClickEvent: .*failed to get page/i,
+      /\[BrowserPreview\].*Extension RPC Error: Extension ID not available/i,
+      /Google Maps JavaScript API has been loaded directly without loading=async/i,
+      /ACTIVITY\s*\{\s*"type"\s*:\s*"scheduler:loaded"/i,
+      /The key \"1\" is not recognized and ignored\./i,
     ];
 
     const originalError = console.error.bind(console);

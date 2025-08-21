@@ -1,6 +1,7 @@
 import { DATA } from "@/data/resume";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
+import AppointletInline from "@/components/appointlet-inline";
 
 export function PricingSection() {
   const { pricing } = DATA;
@@ -61,10 +62,8 @@ export function PricingSection() {
         </div>
       </div>
       
-      <div className="mt-6 text-center">
-        <button className="inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-green-600 to-emerald-700 text-white font-semibold text-sm px-3 py-1.5 shadow-md hover:from-green-700 hover:to-emerald-800 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50">
-          Get Started
-        </button>
+      <div className="mt-6">
+        <AppointletInline url="https://appt.link/hanlin" />
       </div>
     </section>
   );
