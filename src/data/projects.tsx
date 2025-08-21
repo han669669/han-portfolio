@@ -189,8 +189,10 @@ export const projects = [
       "Magic UI",
       "VSCode",
       "Cline",
+      "Windsurf",
       "Vercel",
-      "Google Gemini 2.0 Flash"
+      "Google Gemini 2.0 Flash",
+      "GPT-5 (medium reasoning)"
     ],
     links: [
       {

@@ -41,15 +41,21 @@ export function PricingSection() {
       
       {/* Feature lists */}
       <div className="mt-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
           {pricing.tiers.map((tier, index) => (
-            <div key={index} className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
-              <h4 className="font-medium text-gray-900 dark:text-white">{tier.name}</h4>
-              <ul className="mt-2 pl-5 space-y-1.5 list-disc text-sm text-gray-700 dark:text-gray-300">
-                {tier.features.map((feature, idx) => (
-                  <li key={idx} className="text-gray-600 dark:text-gray-400">{feature}</li>
-                ))}
-              </ul>
+            <div
+              key={index}
+              className="relative overflow-hidden rounded-2xl border bg-gradient-to-b from-white to-gray-50 dark:from-zinc-900 dark:to-zinc-900/60 border-gray-200 dark:border-zinc-800 shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div className="p-5 md:p-6">
+                <h4 className="font-medium text-gray-900 dark:text-white">{tier.name}</h4>
+                <ul className="mt-3 pl-6 space-y-2 list-disc text-sm leading-relaxed text-gray-700 dark:text-gray-300">
+                  {tier.features.map((feature, idx) => (
+                    <li key={idx} className="text-gray-600 dark:text-gray-400">{feature}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-black/5 dark:ring-white/10" />
             </div>
           ))}
         </div>

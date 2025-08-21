@@ -15,6 +15,7 @@ import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import { PricingSection } from "@/components/pricing-section"; 
+import HighlightsSection from "@/components/highlights-section";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -62,6 +63,10 @@ export default function Page() {
 
       <BlurFade delay={BLUR_FADE_DELAY * 5}>
         <PricingSection />
+      </BlurFade>
+
+      <BlurFade delay={BLUR_FADE_DELAY * 5.5}>
+        <HighlightsSection />
       </BlurFade>
 
       <section id="education">

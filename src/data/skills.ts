@@ -50,6 +50,9 @@ export const skills = [
   "Qwen by Alibaba Cloud",
   "Cerebras API",
   "Hugging Face",
+  "Claude Opus 4.1",
+  "Claude Sonnet 4",
+  "GPT-5",
   
   // Development Tools
   "Windsurf AI Code Editor",
@@ -62,4 +65,5 @@ export const skills = [
   "Github Copilot",
   "Replit",
   "DeepSite",
+  "Warp.dev"
 ] as const;

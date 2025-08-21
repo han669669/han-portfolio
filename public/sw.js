@@ -1,13 +1,12 @@
-// Service Worker with aggressive caching strategies
-const CACHE_VERSION = 'v2';
+// Service Worker with tuned caching strategies (versioned)
+const CACHE_VERSION = 'v3';
 const CACHE_NAME = `portfolio-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `runtime-${CACHE_VERSION}`;
 const IMAGE_CACHE = `images-${CACHE_VERSION}`;
 const VIDEO_CACHE = `videos-${CACHE_VERSION}`;
 
-// Critical resources to cache immediately
+// Critical resources to cache immediately (avoid caching HTML '/')
 const CRITICAL_CACHE = [
-  '/',
   '/offline.html',
   '/favicon.svg',
 ];
@@ -53,28 +52,35 @@ self.addEventListener('activate', (event) => {
 // Helper function to determine cache strategy based on request type
 function getCacheStrategy(request) {
   const url = new URL(request.url);
+  const pathname = url.pathname;
+  const accept = request.headers.get('accept') || '';
   
   // Video files - cache first, long expiration
-  if (url.pathname.match(/\.(mp4|webm|ogg)$/)) {
+  if (pathname.match(/\.(mp4|webm|ogg)$/)) {
     return { cacheName: VIDEO_CACHE, strategy: 'cache-first' };
   }
   
   // Images - cache first, medium expiration
-  if (url.pathname.match(/\.(jpg|jpeg|png|gif|svg|ico|webp|avif)$/)) {
+  if (pathname.match(/\.(jpg|jpeg|png|gif|svg|ico|webp|avif)$/)) {
     return { cacheName: IMAGE_CACHE, strategy: 'cache-first' };
   }
   
   // API calls - network first, short expiration
-  if (url.pathname.includes('/api/')) {
+  if (pathname.includes('/api/')) {
     return { cacheName: RUNTIME_CACHE, strategy: 'network-first' };
   }
   
-  // Static assets - stale while revalidate
-  if (url.pathname.match(/\.(css|js|woff2?)$/)) {
+  // Next.js static assets - stale while revalidate
+  if (pathname.startsWith('/_next/static/')) {
+    return { cacheName: CACHE_NAME, strategy: 'stale-while-revalidate' };
+  }
+
+  // Other static assets - stale while revalidate
+  if (pathname.match(/\.(css|js|woff2?)$/)) {
     return { cacheName: CACHE_NAME, strategy: 'stale-while-revalidate' };
   }
   
-  // HTML pages - network first
+  // HTML pages and Next data - handled as network-first in fetch; avoid long-lived cache
   return { cacheName: RUNTIME_CACHE, strategy: 'network-first' };
 }
 
@@ -85,7 +91,11 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  const { cacheName, strategy } = getCacheStrategy(event.request);
+  const req = event.request;
+  const url = new URL(req.url);
+  const { cacheName, strategy } = getCacheStrategy(req);
+  const isNavigate = req.mode === 'navigate' || (req.headers.get('accept') || '').includes('text/html');
+  const isNextData = url.pathname.startsWith('/_next/data/');
   
   if (strategy === 'cache-first') {
     // Cache first strategy - ideal for static assets
@@ -112,20 +122,26 @@ self.addEventListener('fetch', (event) => {
   } else if (strategy === 'network-first') {
     // Network first strategy - ideal for dynamic content
     event.respondWith(
-      fetch(event.request)
+      fetch(req)
         .then((networkResponse) => {
           if (networkResponse.ok) {
-            const responseToCache = networkResponse.clone();
-            caches.open(cacheName).then((cache) => {
-              cache.put(event.request, responseToCache);
-            });
+            // Do NOT cache navigational HTML or Next data JSON to avoid staleness after deploys
+            const shouldSkipCache = isNavigate || isNextData;
+            if (!shouldSkipCache) {
+              const responseToCache = networkResponse.clone();
+              caches.open(cacheName).then((cache) => {
+                cache.put(req, responseToCache);
+              });
+            }
           }
           return networkResponse;
         })
         .catch(() => {
-          return caches.match(event.request).then((cachedResponse) => {
-            return cachedResponse || caches.match('/offline.html');
-          });
+          // If navigation failed (likely offline), serve offline.html; otherwise try cache fallback
+          if (isNavigate) {
+            return caches.match('/offline.html');
+          }
+          return caches.match(req);
         })
     );
   } else {

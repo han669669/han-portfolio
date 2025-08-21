@@ -44,7 +44,7 @@ export function ProjectCard({
   return (
     <Card
       className={
-        "flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full"
+        "relative flex flex-col overflow-hidden rounded-2xl border hover:shadow-lg transition-all duration-300 ease-out h-full"
       }
     >
       <Link
@@ -114,6 +114,8 @@ export function ProjectCard({
           </div>
         )}
       </CardFooter>
+      {/* soft ring overlay for consistent framing */}
+      <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-black/5 dark:ring-white/10" />
     </Card>
   );
 }

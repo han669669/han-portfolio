@@ -6,9 +6,9 @@ import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ServiceWorkerRegistration } from "@/components/service-worker-registration";
+import DevConsoleSilencer from "@/components/dev-console-silencer";
+import ProductionAnalytics from "@/components/production-analytics";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -62,6 +62,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const isProd = process.env.NODE_ENV === 'production';
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -79,8 +80,8 @@ export default function RootLayout({
           <TooltipProvider delayDuration={0}>
             {children}
             <Navbar />
-            <Analytics />
-            <SpeedInsights />
+            {isProd && <ProductionAnalytics />}
+            {!isProd && <DevConsoleSilencer />}
             <ServiceWorkerRegistration />
           </TooltipProvider>
         </ThemeProvider>
