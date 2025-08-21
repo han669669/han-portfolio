@@ -75,8 +75,8 @@ export default function AppointletInline({
         <div className="overflow-hidden rounded-2xl min-h-0">
           <div
             className={cn(
-              "rounded-2xl border border-gray-200 bg-white p-2 dark:border-zinc-800 dark:bg-zinc-900 will-change-transform transform-gpu transition-opacity transition-transform duration-200 ease-out motion-reduce:transition-none",
-              open ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-1"
+              "rounded-2xl border border-gray-200 bg-white p-2 dark:border-zinc-800 dark:bg-zinc-900 transition-opacity duration-200 ease-out motion-reduce:transition-none pointer-events-auto",
+              open ? "opacity-100" : "opacity-0"
             )}
             ref={holderRef}
             suppressHydrationWarning
@@ -90,6 +90,7 @@ export default function AppointletInline({
                   className="w-full h-[70vh] md:h-[900px] rounded-xl"
                   loading="lazy"
                   allow="fullscreen"
+                  style={{ touchAction: "manipulation" }}
                 />
               ) : (
                 // Primary path: let Appointlet script convert this into an iframe
